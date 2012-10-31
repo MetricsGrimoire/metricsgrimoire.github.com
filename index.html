@@ -4,78 +4,80 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Metrics Grimoire by MetricsGrimoire</title>
-
+    
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1 class="header">Metrics Grimoire</h1>
-        <p class="header">Data Mining Tools</p>
-
-
+        <p class="header">Tools for software &amp; development community analytics</p>
 
         <ul>
-          <li><a class="buttons github" href="https://github.com/MetricsGrimoire">GitHub Profile</a></li>
+          <li><a class="buttons github" href="https://github.com/MetricsGrimoire">Project @ GitHub</a></li>
         </ul>
 
       </header>
       <section>
         <h1>Metrics Grimoire</h1>
 
-<p>Metrics Grimoire (usually pronounced in the French way)  aims at providing a full set of tools to mine your favourite open source projects (included those hosted at GitHub!).
-This project was born in the Libresoft research group at University Rey Juan Carlos. After several years of work, a small community started to grow. Even later, a spin-off appeared, named Bitergia. In the meanwhile the old-named libresoft-tools were moved to a more neutral place where everyone is more than welcome to participate: Metrics Grimoire.</p>
+	<p>Metrics Grimoire (usually pronounced in the French way) is a toolset to obtain data from repositories related to software development: source code management (aka version control) and issue tracking (aka bug reporting) systems, mailing lists, etc. Data and metadata about the software development processes is retrieved from those repositories (information about commits, ticket management, communication in mailing lists, etc.), and then organized and stored into SQL databases that can later be mined for specific patterns or summaries of activity.</p>
 
-<h2>Source code, reporting bugs, communication</h2>
+	<p>Metrics Grimoire tools support many kinds of repositories, including those provided by GitHub (git &amp; GitHub issue tracking), and has been used to analyzed many different projects already.
 
-<p>There are several resources that can be of use for getting the source code, contributing, reporting bugs, or just communicating with developers:</p>
+	<p>Metrics Grimoire has its origins in the <a href="http://libresoft.es">Libresoft research group</a> at <a href="http://www.urjc.es">Universidad Rey Juan Carlos</a> as a toolset named LibreSoft Tools. After several years of development, a small community started to grow around it, now including developers and users from all around the world. Later, a spin-off company of the research group was founded, <a href="http://bitergia.com">Bitergia</a>, providing professional services around those tools. In parallel to this proces, LibreSoft Tools evolved into a more neutral, community-oriented project: Metrics Grimoire.</p>
 
-<ul>
-<li>IRC channel: we usually hang out at <a href="irc://irc.freenode.net/metrics-grimoire">#metrics-grimoire</a> in <a href="http://freenode.net/">freenode</a> (<a href="http://webchat.freenode.net/?nick=webchat..&channels=metrics-grimoire&prompt=1">access via webchat</a>)</li>
-<li>Mailing list: <a href="https://lists.libresoft.es/listinfo/metrics-grimoire">metrics-grimoire</a> at lists.libresoft.es, for developers, contributors and users (<a href="https://lists.libresoft.es/pipermail/metrics-grimoire/">archives are available</a>)</li>
-<li>Source code: available in several git repositories at the <a href="https://github.com/metricsgrimoire">MetricsGrimoire GitHub project</a></li>
-<li>Submitting bug reports: we use the GitHub issue tracking system ("Issues" tab in each of the repositories of the <a href="https://github.com/metricsgrimoire">MetricsGrimoire GitHub project</a></li>
-</ul>
 
-<h2>Main tools</h2>
+	<h2>Main tools</h2>
 
-<p>The following is a list of the current set of tools with a brief description. If you are interested in more information, please visit each of the pages per tool or read the install or readme files.</p>
+	<p>The following is a list of the current set of tools with a brief description. If you are interested in more information, please visit each of the pages per tool or read the install or readme files.</p>
+	
+	<h3>CVSAnalY</h3>
 
-<h2>CVSAnalY</h2>
+	<p>Tool to retrieve information from the source code management system or versioning systems. This is supporting CVS, SVN and Git so far. It is in process the creation of an extension for Bazaar and Mercurial is in our minds.</p>
+	
+	<p><a href="https://github.com/MetricsGrimoire/CVSAnalY">Repository at GitHub</a></p>
 
-<p>Tool to retrieve information from the source code management system or versioning systems. This is supporting CVS, SVN and Git so far. It is in process the creation of an extension for Bazaar and Mercurial is in our minds.</p>
+	<h3>Bicho</h3>
 
-<p><a href="https://github.com/MetricsGrimoire/CVSAnalY">Repository at GitHub</a></p>
+	<p>Tool to retrieve information from the bug tracking system.</p>
+	
+	<p><a href="https://github.com/MetricsGrimoire/Bicho">Repository at GitHub</a></p>
+	
+	<h3>MailingListStats</h3>
 
-<h2>Bicho</h2>
+	<p>Tool to retrieve information from the mailing lists. Only supporting archives with mbox format.</p>
 
-<p>Tool to retrieve information from the bug tracking system.</p>
+	<p><a href="https://github.com/MetricsGrimoire/MailingListStats">Repository at GitHub</a></p>
 
-<p><a href="https://github.com/MetricsGrimoire/Bicho">Repository at GitHub</a></p>
+	<h3>Repository Handler</h3>
 
-<h2>MailingListStats</h2>
+	<p>This is a library to handle repositories of source code</p>
 
-<p>Tool to retrieve information from the mailing lists. Only supporting archives with mbox format.</p>
+	<p><a href="https://github.com/MetricsGrimoire/RepositoryHandler">Repository at GitHub</a></p>
 
-<p><a href="https://github.com/MetricsGrimoire/MailingListStats">Repository at GitHub</a></p>
+	<h3>CMetrics</h3>
 
-<h2>Repository Handler</h2>
+	<p>This tool provides metrics about C code</p>
 
-<p>This is a library to handle repositories of source code</p>
+	<p><a href="https://github.com/MetricsGrimoire/CMetrics">Repository at GitHub</a></p>
 
-<p><a href="https://github.com/MetricsGrimoire/RepositoryHandler">Repository at GitHub</a></p>
+	<h2>Source code, reporting bugs, communication</h2>
 
-<h2>CMetrics</h2>
+	<p>There are several resources that can be of use for getting the source code, contributing, reporting bugs, or just communicating with developers:</p>
 
-<p>This tool provides metrics about C code</p>
-
-<p><a href="https://github.com/MetricsGrimoire/CMetrics">Repository at GitHub</a></p>
+	<ul>
+	  <li>IRC channel: we usually hang out at <a href="irc://irc.freenode.net/metrics-grimoire">#metrics-grimoire</a> in <a href="http://freenode.net/">freenode</a> (<a href="http://webchat.freenode.net/?nick=webchat..&channels=metrics-grimoire&prompt=1">access via webchat</a>)</li>
+	  <li>Mailing list: <a href="https://lists.libresoft.es/listinfo/metrics-grimoire">metrics-grimoire</a> at lists.libresoft.es, for developers, contributors and users (<a href="https://lists.libresoft.es/pipermail/metrics-grimoire/">archives are available</a>)</li>
+	  <li>Source code: available in several git repositories at the <a href="https://github.com/metricsgrimoire">MetricsGrimoire GitHub project</a></li>
+	  <li>Submitting bug reports: we use the GitHub issue tracking system ("Issues" tab in each of the repositories of the <a href="https://github.com/metricsgrimoire">MetricsGrimoire GitHub project</a></li>
+	</ul>
 
       </section>
       <footer>
@@ -83,6 +85,6 @@ This project was born in the Libresoft research group at University Rey Juan Car
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+    
   </body>
 </html>
