@@ -28,18 +28,42 @@
         <h1>Google Summer of Code 2014</h1>
 
         <h2>Introduction to Metrics Grimoire</h2>
-	<p>Metrics Grimoire is a toolset to obtain data from repositories related to software development: source code management (aka version control) and issue tracking (aka bug reporting) systems, mailing lists, etc. Data and metadata about the software development processes are retrieved from those repositories (information about commits, ticket management, communication in mailing lists, etc.), and then organized and stored into SQL databases that can later be mined for specific patterns or summaries of activity.</p>
+	<p>Metrics Grimoire is a toolset to assist developers and researchers to understand better the software practices in their projects. Metrics Grimoire can collect, prepare and create reports from different data sources, such as version control systems, issue tracking systems, mailing lists, wiki pages, IRC logs. Metrics Grimoire consists in different specialized tools for each kind of data source, to collect data and metadata, store them in databases for further data mining, and to visualize them on the web.</p>
 
-	<p>Metrics Grimoire tools support many kinds of repositories, including those provided by GitHub (git &amp; GitHub issue tracking), and has been used to analyzed many different projects already.
+	<p>Metrics Grimoire supports multiples flavours of each kind of data source. For example, it supports multiple types of issue trackers (Allura, Bugzilla, Gerrit, GitHub, GoogleCode, Jira, Launchpad, RedMine, and SourceForge), multiple types of version control systems (Bazaar, CVS, Git, Subversion, and Tarballs). Thus, Metrics Grimoire allows consolidation of data to be analyzed altogether.
 
-	<p>Metrics Grimoire has its origins in the <a href="http://libresoft.es">Libresoft research group</a> at <a href="http://www.urjc.es">Universidad Rey Juan Carlos</a> as a toolset named LibreSoft Tools. After several years of development, a small community started to grow around it, now including developers and users from all around the world. Later, a spin-off company of the research group was founded, <a href="http://bitergia.com">Bitergia</a>, providing professional services around those tools. In parallel to this proces, LibreSoft Tools evolved into a more neutral, community-oriented project: Metrics Grimoire.</p>
+	<p>Metrics Grimoire started as a toolset named LibreSoft tools, developed originally by the <a href="http://libresoft.es">Libresoft Research Group</a> at <a href="http://www.urjc.es">Universidad Rey Juan Carlos</a>. After several years of development, a small community started to grow around it, now including developers and users from all around the world. Later, a spin-off company of the research group was founded, <a href="http://bitergia.com">Bitergia</a>, providing professional services around those tools. In parallel to this proces, LibreSoft Tools evolved into a more neutral, community-oriented project: Metrics Grimoire.</p>
 
 <h2>Potential Projects to be developed</h2>
 <ul>
- <li>Integration of Ninka (license tool) with CVSAnalY.<br>
-     CVSAnalY currently supports several version control systems such as Git, SVN or CVS. Besides, Ninka is a powerful tool to analyze the license of each of the files of the product. The integration of Ninka as an extension of CVSAnalY will produce a tool able to analyze per file and revision a complete insight of the license state of any project. <br>
-     Mentor: Luis Cañas, lcanas at bitergia dot com</li>
-
+ <li><strong>CVSAnalY</strong>: Add support for license detection using Ninka (mentor: <a href="http://sanacl.wordpress.com/">Luis Cañas</a>)
+     <ul>
+     <li><em>Benefits</em>: Aggregates the analysis of version control systems with the license present in every file to get a better overview of the projects.</li>
+     <li><em>Requirements</em>: Knowledge in Python and Perl.</li>
+     <li><em>Notes</em>: Ninka is a powerful tool to analyze the license of each of the files of the product. The integration of Ninka as an extension of CVSAnalY will produce a tool able to analyze per file and revision a complete insight of the license state of any project.</li>
+     </ul>
+ </li>
+ <li><strong>Bicho, CVSAnalY, MailingListStats</strong>: Port to SQLAlchemy (mentor: <a href="http://blog.dizquierdo.es/">Daniel Izquierdo</a>)
+     <ul>
+     <li><em>Benefits</em>: Improves the maintenance of these tools in the long term.</li>
+     <li><em>Requirements</em>: Knowledge in Python (knowledge in SQLAlchemy is a plus)</li>
+     <li><em>Notes</em>: Each project was developed independently. Although they have a similar structure and can share the data models, those are currently handled in different ways. The work consists in to facilitate future contributions to the project by making the data manipulation consistent across applications, and make easier to build new tools on top of them.</li>
+     </ul>
+ </li>
+ <li><strong>Bicho</strong>: Improve backends to use web APIs whenever is possible (mentor: <a href="http://blog.dizquierdo.es/">Daniel Izquierdo</a>)
+     <ul>
+     <li><em>Benefits</em>: Improves long-tern maintainability of issue tracker support.</li>
+     <li><em>Requirements</em>: Knowledge in Python (knowledge in web services is a plus)</li>
+     <li><em>Notes</em>: Currently, most backends parse HTML from the issue trackers. These method is useful when the issue trackers did not support access via web API or when they were disabled. These days, it is more common to find them enabled. This work consists in adding support for web API to every backend, and leaving as fallback scrapping the web pages. This should be part of several bugs to fix. See <a href="https://github.com/MetricsGrimoire/Bicho/issues">Bicho's issues</a> to get more ideas.</li>
+     </ul>
+ </li>
+ <li><strong>MailingListStats</strong>: Add support for social network analysis (mentor: <a href="http://calcifer.org/">Germán Poo-Caamaño</a>)
+     <ul>
+     <li><em>Benefits</em>: Increase the analytic of interactions in mailing lists to detect different communication patterns.</li>
+     <li><em>Requirements</em>: Knowledge in Python (knowledge in social network analysis is a plus)</li>
+     <li><em>Notes</em>: Your work will consist in to aggregate the interactions in mailing lists, determine different metrics from social network analysis, and create automatic reports from as well as a guide to further development. You will need to identify multiple identities of individuals, timing, etc. and combine with other activities happening at similar period of time (for example, to determine actions triggered by discussions, or viceversa). This should be part of other tasks, like extending this work to aggregate multiple identities from the other tools (Bicho, CVSAnalY).</li>
+     </ul>
+ </li>
 </ul>
 
 
