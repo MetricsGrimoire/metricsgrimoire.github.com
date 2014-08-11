@@ -27,11 +27,18 @@
       <section>
         <h1>MetricsGrimoire</h1>
 
-	<p>MetricsGrimoire (pronounced /ˈmetrɪksɡrɪmˈwɑr/) is a toolset to obtain data from repositories related to software development: source code management (aka version control) and issue tracking (aka bug reporting) systems, mailing lists, etc. Data and metadata about the software development processes is retrieved from those repositories (information about commits, ticket management, communication in mailing lists, etc.), and then organized and stored into SQL databases that can later be mined for specific patterns or summaries of activity.</p>
+	<p><strong>MetricsGrimoire</strong> (pronounced /ˈmetrɪksɡrɪmˈwɑr/) is a toolset to obtain data from repositories related to software development: source code management (aka <em>version control</em>), issue tracking (aka <em>bug reporting</em>) systems, mailing lists, etc. Data and metadata about the software development processes is retrieved from those repositories (information about commits, ticket management, communication in mailing lists, etc.), and then organized and stored into SQL databases that can later be mined for specific patterns or summaries of activity.</p>
 
-	<p>MetricsGrimoire tools support many kinds of repositories, including those provided by GitHub (git &amp; GitHub issue tracking), and has been used to analyzed many different projects already.
+	<p><strong>MetricsGrimoire</strong> tools support many kinds of repositories, including those provided by GitHub (git &amp; GitHub issue tracking).</p>
+	
+	<img src="images/supportted-repositories.jpg" alt="Repositories supported by MetricsGrimoire: git, bugzilla, mailman, redmine, etc."/>
+	
+	<p><strong>MetricsGrimoire</strong> has been already used to analyzed many different projects and together with visualization
+ tools like <a href="http://vizgrimoire.bitergia.org/">VizGrimoire</a> it is possible to get dashboards or reports like <a href="http://bitergia.com/dashboards">the ones provided by Bitergia</a>.</p>
+	<h2>Background</h2>
 
-	<p>MetricsGrimoire has its origins in the <a href="http://libresoft.es">Libresoft research group</a> at <a href="http://www.urjc.es">Universidad Rey Juan Carlos</a> as a toolset named LibreSoft Tools. After several years of development, a small community started to grow around it, now including developers and users from all around the world. Later, a spin-off company of the research group was founded, <a href="http://bitergia.com">Bitergia</a>, providing professional services around those tools. In parallel to this proces, LibreSoft Tools evolved into a more neutral, community-oriented project: MetricsGrimoire.</p>
+	<p><strong>MetricsGrimoire</strong> has its origins in the <a href="http://www.libresoft.es"><strong>Libresoft</strong> research group</a> at <a href="http://www.urjc.es">Universidad Rey Juan Carlos</a> as a toolset named <em>LibreSoft Tools</em>. After several years of development, a small community started to grow around it, now including developers and users from all around the world.</p>
+	<p><a href="http://bitergia.com"><strong>Bitergia</strong></a>, a spin-off company founded from the research group, provides <a href="http://bitergia.com/services">professional services around those tools</a>. In parallel to this proces, <em>LibreSoft Tools</em> evolved into a more neutral, community-oriented project: <strong>MetricsGrimoire</strong>.</p>
 
 
 	<h2>Main tools</h2>
@@ -40,36 +47,42 @@
 	
 	<h3><a href="CVSAnalY">CVSAnalY</a></h3>
 
-	<p>Retrieves and organizes information from source code management (version control) systems. It currently supports CVS, Subversion and git repositories, with Bazaar and Mercurial in the planning.</p>
+	<p>Retrieves and organizes information from source code management (<em>version control</em>) systems. It currently supports CVS, Subversion and git repositories, with Bazaar and Mercurial in the planning.</p>
 	
-	<p><a href="https://github.com/MetricsGrimoire/CVSAnalY">Repository at GitHub</a></p>
-	<p><a href="https://github.com/MetricsGrimoire/CVSAnalY/wiki/">Wiki documentation</a> and <a href="https://github.com/MetricsGrimoire/CVSAnalY/wiki/Database-Schema">database schema</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/CVSAnalY">CVSAnalY repository at GitHub</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/CVSAnalY/wiki/">CVSAnalY wiki documentation</a> and <a href="https://github.com/MetricsGrimoire/CVSAnalY/wiki/Database-Schema">database schema</a></p>
 
 	<h3><a href="Bicho">Bicho</a></h3>
 
 	<p>Retrieves and organizes information from issue tracking system. Currently it supports Bugzilla, Jira, and the SourceForge, Allura, GitHub, Google Code, Launchpad, Redmine and GitHub trackers. Trac is in the planning.</p>
 	
-	<p><a href="https://github.com/MetricsGrimoire/Bicho">Repository at GitHub</a></p>
-	<p><a href="https://github.com/MetricsGrimoire/Bicho/wiki/">Wiki documentation</a> and <a href="https://github.com/MetricsGrimoire/Bicho/wiki/Database-Schema">database schema</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/Bicho">Bicho repository at GitHub</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/Bicho/wiki/">Bicho wiki documentation</a> and <a href="https://github.com/MetricsGrimoire/Bicho/wiki/Database-Schema">database schema</a></p>
 	
 	<h3><a href="MailingListStats">MailingListStats</a></h3>
 
 	<p>Retrieves information from mailing lists. It supports archives as local files in mbox format, or web-accessible Mailman archives.</p>
 
-	<p><a href="https://github.com/MetricsGrimoire/MailingListStats">Repository at GitHub</a></p>
-	<p><a href="https://github.com/MetricsGrimoire/MailingListStats/wiki/">Wiki documentation</a> and <a href="https://github.com/MetricsGrimoire/MailingListStats/wiki/Database-Schema">database schema</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/MailingListStats">MailingListStats repository at GitHub</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/MailingListStats/wiki/">MailingListStats wiki documentation</a> and <a href="https://github.com/MetricsGrimoire/MailingListStats/wiki/Database-Schema">database schema</a></p>
 
 	<h3><a href="RepositoryHandler">Repository Handler</a></h3>
 
 	<p>Library to handle repositories of source code.</p>
 
-	<p><a href="https://github.com/MetricsGrimoire/RepositoryHandler">Repository at GitHub</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/RepositoryHandler">RepositoryHandler repository at GitHub</a></p>
 
 	<h3>CMetrics</h3>
 
 	<p>Extraction of some measures (size, complexity, etc.) from C code</p>
 
-	<p><a href="https://github.com/MetricsGrimoire/CMetrics">Repository at GitHub</a></p>
+	<p><a href="https://github.com/MetricsGrimoire/CMetrics">CMetrics repository at GitHub</a></p>
+	
+	<h3>Sibyl</h3>
+	
+	<p>Sibyl aims at extracting information from websites that follow a <em>question-and-answer</em> format and storing it into a database. It currently supports Askbot. Other sites like StackOverflow are in the planning.</p>
+	
+	<p><a href="https://github.com/MetricsGrimoire/Sibyl">Sibyl repository at GitHub</a></p>
 
 	<h2>Source code, reporting bugs, communication</h2>
 
